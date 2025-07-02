@@ -1,0 +1,40 @@
+/* Custom Styles - Orange Theme */
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    #ea580c 0%,   /* orange-600 */
+    #f59e42 50%,  /* orange-400 */
+    #fbbf24 100%  /* orange-300 */
+  );
+}
+.product-card:hover .product-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+.product-overlay {
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.language-dropdown {
+  pointer-events: none;
+}
+.group:hover .language-dropdown {
+  pointer-events: auto;
+}
+.nav-link {
+  position: relative;
+}
+.nav-link:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #f59e42; /* orange-400 */
+  transition: width 0.3s ease;
+}
+.nav-link:hover:after {
+  width: 100%;
+}
