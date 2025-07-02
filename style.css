@@ -38,3 +38,7 @@
 .nav-link:hover:after {
   width: 100%;
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,141 +1,131 @@
-// Mobile menu toggle
-document
-  .getElementById("mobile-menu-button")
-  .addEventListener("click", function () {
-    const menu = document.getElementById("mobile-menu");
-    if (menu.classList.contains("hidden")) {
-      menu.classList.remove("hidden");
-      setTimeout(() => menu.classList.remove("scale-y-0"), 10);
-    } else {
-      menu.classList.add("scale-y-0");
-      setTimeout(() => menu.classList.add("hidden"), 300);
-    }
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  const translations = {};
+  let currentLang = localStorage.getItem("lang") || "en";
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
-
-// Add animation to product cards when they come into view
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animate-fadeIn");
+  function setLang(lang) {
+    currentLang = lang;
+    localStorage.setItem("lang", lang);
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang] && translations[lang][key]) {
+        el.innerText = translations[lang][key];
       }
     });
-  },
-  { threshold: 0.1 }
-);
-
-document.querySelectorAll(".product-card").forEach((card) => {
-  observer.observe(card);
-});
-
-// Language Switcher Logic
-const translations = {};
-fetch("translation.json")
-  .then((res) => res.json())
-  .then((data) => {
-    Object.assign(translations, data);
-  });
-
-let currentLang = "en";
-
-function setLang(lang) {
-  currentLang = lang;
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (translations[lang] && translations[lang][key]) {
-      el.innerText = translations[lang][key];
-    }
-  });
-  // Update button text
-  const langBtnSpan = document.querySelector("#open-lang-modal span");
-  if (langBtnSpan) langBtnSpan.innerText = lang.toUpperCase();
-  // Update mobile menu button text
-  const langBtnSpanMobile = document.querySelector(
-    "#open-lang-modal-mobile span"
-  );
-  if (langBtnSpanMobile) langBtnSpanMobile.innerText = lang.toUpperCase();
-}
-
-// Modal logic
-const langModal = document.getElementById("lang-modal");
-const openLangModalBtn = document.getElementById("open-lang-modal");
-const openLangModalBtnMobile = document.getElementById(
-  "open-lang-modal-mobile"
-);
-const closeLangModalBtn = document.getElementById("close-lang-modal");
-
-if (openLangModalBtn && langModal) {
-  openLangModalBtn.addEventListener("click", () => {
-    langModal.classList.remove("hidden");
-  });
-}
-if (openLangModalBtnMobile && langModal) {
-  openLangModalBtnMobile.addEventListener("click", () => {
-    langModal.classList.remove("hidden");
-  });
-}
-if (closeLangModalBtn && langModal) {
-  closeLangModalBtn.addEventListener("click", () => {
-    langModal.classList.add("hidden");
-  });
-}
-// Close modal on outside click
-window.addEventListener("click", (e) => {
-  if (
-    langModal &&
-    !langModal.classList.contains("hidden") &&
-    e.target === langModal
-  ) {
-    langModal.classList.add("hidden");
+    const langBtnSpans = document.querySelectorAll(".language-selector span");
+    langBtnSpans.forEach(span => {
+      if (span) span.innerText = lang.toUpperCase();
+    });
   }
-});
-// Change language from modal
-const langModalBtns = document.querySelectorAll(".lang-modal-btn");
-langModalBtns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const lang = btn.getAttribute("data-lang");
-    setLang(lang);
-    langModal.classList.add("hidden");
-  });
-});
 
-// On load
-window.addEventListener("DOMContentLoaded", () => setLang(currentLang));
+  function initializeApp() {
+    // --- MOBILE MENU ---
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", function () {
+        if (mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove("hidden");
+          setTimeout(() => mobileMenu.classList.remove("scale-y-0"), 10);
+        } else {
+          mobileMenu.classList.add("scale-y-0");
+          setTimeout(() => mobileMenu.classList.add("hidden"), 300);
+        }
+      });
+    }
 
+    // --- SMOOTH SCROLLING ---
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetElement = document.querySelector(this.getAttribute("href"));
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
 
-
-
-   // Select the form using its ID
-        const contactForm = document.getElementById('contact-form');
-
-        // Add an event listener for the 'submit' event
-        contactForm.addEventListener('submit', function(event) {
-            // Prevent the default form submission behavior
-            event.preventDefault();
-
-            // Get the value from the message field
-            const message = document.getElementById('message').value;
-            
-            // The destination email address
-            const toEmail = 'Abd.bako.company@gmail.com';
-            
-            // A default subject line for the email
-            const subject = 'Message from Website Contact Form';
-
-            // Create the 'mailto' link. We use encodeURIComponent to ensure
-            // special characters in the subject and body are handled correctly.
-            const mailtoLink = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-
-            // Redirect the browser to the 'mailto' link, which opens the user's default email client.
-            window.location.href = mailtoLink;
+    // --- INTERSECTION OBSERVER FOR ANIMATIONS ---
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fadeIn");
+          }
         });
+      },
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll(".product-card").forEach((card) => {
+      observer.observe(card);
+    });
+
+    // --- MODAL LOGIC ---
+    const langModal = document.getElementById("lang-modal");
+    const termsModal = document.getElementById("terms-modal");
+    const noticeModal = document.getElementById("notice-modal");
+
+    function openModal(modal) {
+      if (modal) modal.classList.remove("hidden");
+    }
+    function closeModal(modal) {
+      if (modal) modal.classList.add("hidden");
+    }
+
+    // Event Listeners to OPEN modals
+    document.getElementById("open-lang-modal")?.addEventListener("click", () => openModal(langModal));
+    document.getElementById("open-lang-modal-mobile")?.addEventListener("click", () => openModal(langModal));
+    document.getElementById("terms-link")?.addEventListener("click", (e) => {
+      e.preventDefault();
+      openModal(termsModal);
+    });
+    document.getElementById("notice-link")?.addEventListener("click", (e) => {
+      e.preventDefault();
+      openModal(noticeModal);
+    });
+
+    // Event Listeners to CLOSE modals
+    document.getElementById("close-lang-modal")?.addEventListener("click", () => closeModal(langModal));
+    document.getElementById("close-terms-modal")?.addEventListener("click", () => closeModal(termsModal));
+    document.getElementById("close-notice-modal")?.addEventListener("click", () => closeModal(noticeModal));
+    document.getElementById("close-terms-modal-button")?.addEventListener("click", () => closeModal(termsModal));
+    document.getElementById("close-notice-modal-button")?.addEventListener("click", () => closeModal(noticeModal));
+
+    window.addEventListener("click", (e) => {
+      if (e.target === langModal) closeModal(langModal);
+      if (e.target === termsModal) closeModal(termsModal);
+      if (e.target === noticeModal) closeModal(noticeModal);
+    });
+
+    // Handle language selection from modal
+    document.querySelectorAll(".lang-modal-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const lang = btn.getAttribute("data-lang");
+        setLang(lang);
+        closeModal(langModal);
+      });
+    });
+
+    // --- CONTACT FORM LOGIC ---
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const message = document.getElementById('message').value;
+        const toEmail = 'Abd.bako.company@gmail.com';
+        const subject = 'Message from Website Contact Form';
+        const mailtoLink = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+        window.location.href = mailtoLink;
+      });
+    }
+  }
+
+  // Fetch translations, then initialize the app
+  fetch("translation.json")
+    .then((res) => res.json())
+    .then((data) => {
+      Object.assign(translations, data);
+      setLang(currentLang); // Translate the page first
+      initializeApp(); // Then initialize all event listeners
+    })
+    .catch(e => console.error("Could not load translations:", e));
+});
