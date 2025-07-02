@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="Assets/Logo.png" type="image/png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bako © - Premium Lubricants</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -154,103 +153,113 @@
       </div>
     </header>
 
-          <!-- Product Cards -->
-            <div
-                class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4"
-            >
-                <img
-                src="Assets/Products/1.png"
-                alt="Product 1"
-                class="h-40 object-contain mb-4"
-                />
-                <h2 class="text-lg font-bold mb-2 text-orange-800">Product 1</h2>
-                <p class="text-gray-600 text-center mb-2">
-                High performance lubricant for automotive engines.
-                </p>
-            </div>
-            <div
-                class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4"
-            >
-                <img
-                src="Assets/Products/2.png"
-                alt="Product 2"
-                class="h-40 object-contain mb-4"
-                />
-                <h2 class="text-lg font-bold mb-2 text-orange-800">Product 2</h2>
-                <p class="text-gray-600 text-center mb-2">
-                Premium oil for industrial machinery and equipment.
-                </p>
-            </div>
-            <div
-                class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4"
-            >
-                <img
-                src="Assets/Products/3.png"
-                alt="Product 3"
-                class="h-40 object-contain mb-4"
-                />
-                <h2 class="text-lg font-bold mb-2 text-orange-800">Product 3</h2>
-                <p class="text-gray-600 text-center mb-2">
-                Synthetic lubricant for extended engine life.
-                </p>
-            </div>
-            <div
-                class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4"
-            >
-                <img
-                src="Assets/Products/4.png"
-                alt="Product 4"
-                class="h-40 object-contain mb-4"
-                />
-                <h2 class="text-lg font-bold mb-2 text-orange-800">Product 4</h2>
-                <p class="text-gray-600 text-center mb-2">
-                Heavy-duty oil for trucks and commercial vehicles.
-                </p>
-            </div>
-            <div
-                class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4"
-            >
-                <img
-                src="Assets/Products/5.png"
-                alt="Product 5"
-                class="h-40 object-contain mb-4"
-                />
-                <h2 class="text-lg font-bold mb-2 text-orange-800">Product 5</h2>
-                <p class="text-gray-600 text-center mb-2">
-                Eco-friendly lubricant for modern engines.
-                </p>
-            </div>
-            <div
-                class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4"
-            >
-                <img
-                src="Assets/Products/6.png"
-                alt="Product 6"
-                class="h-40 object-contain mb-4"
-                />
-                <h2 class="text-lg font-bold mb-2 text-orange-800">Product 6</h2>
-                <p class="text-gray-600 text-center mb-2">
-                Multi-purpose oil for various applications.
-                </p>
-            </div>
-            <div
-                class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-4"
-            >
-                <img
-                src="Assets/Products/7.png"
-                alt="Product 7"
-                class="h-40 object-contain mb-4"
-                />
-                <h2 class="text-lg font-bold mb-2 text-orange-800">Product 7</h2>
-                <p class="text-gray-600 text-center mb-2">
-                Advanced protection for high-performance engines.   
-                </p>
-            </div>
-            </div>
+
+
+
+    <div class="container mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 mb-12">Our Featured Products</h1>
+        
+        <!-- Responsive product grid - updated for larger cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <!-- Product data in a JavaScript array for easy modification -->
+            <script>
+                const products = [
+                    {
+                        id: 1,
+                        name: "Product 1",
+                        description: "High performance lubricant for automotive engines.",
+                        price: "75.00",
+                        image: "/Assets/Products/1.png"
+                    },
+                    {
+                        id: 2,
+                        name: "Product 2",
+                        description: "Premium oil for industrial machinery and equipment.",
+                        price: "90.50",
+                        image: "/Assets/Products/2.png"
+                    },
+                    {
+                        id: 3,
+                        name: "Product 3",
+                        description: "Synthetic lubricant for extended engine life.",
+                        price: "110.00",
+                        image: "/Assets/Products/3.png"
+                    },
+                    {
+                        id: 4,
+                        name: "Product 4",
+                        description: "Heavy-duty oil for trucks and commercial vehicles.",
+                        price: "135.00",
+                        image: "/Assets/Products/4.png"
+                    },
+                    {
+                        id: 5,
+                        name: "Product 5",
+                        description: "Eco-friendly lubricant for modern engines.",
+                        price: "99.99",
+                        image: "/Assets/Products/5.png"
+                    },
+                    {
+                        id: 6,
+                        name: "Product 6",
+                        description: "Multi-purpose oil for various applications.",
+                        price: "65.00",
+                        image: "/Assets/Products/6.png"
+                    },
+                    {
+                        id: 7,
+                        name: "Product 7",
+                        description: "Advanced protection for high-performance engines.",
+                        price: "150.00",
+                        image: "/Assets/Products/7.png"
+                    }
+                ];
+
+                // Target the grid container
+                const productGrid = document.querySelector('.grid');
+
+                // Create a card for each product
+                products.forEach(product => {
+                    productGrid.innerHTML += `
+                        <!-- Product Card ${product.id} -->
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out relative group">
+                            <!-- Favorite Icon -->
+                            <div class="absolute top-4 right-4 bg-white rounded-full p-2 cursor-pointer text-gray-300 hover:text-orange-500 hover:scale-110 transition-all duration-200 z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                                </svg>
+                            </div>
+
+                            <!-- Product Image -->
+                            <div class="h-56 flex items-center justify-center p-4 bg-gray-50">
+                                <img src="${product.image}" alt="${product.name}" class="max-h-full max-w-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/400x400/f87171/fff?text=Image+Not+Found';">
+                            </div>
+
+                            <!-- Card Content -->
+                            <div class="p-6 text-center">
+                                <h2 class="text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-800">${product.name}</h2>
+                                <p class="text-gray-600 mb-4 h-14 text-sm">${product.description}</p>
+                                
+                                <!-- Price -->
+                                <div class="mb-5">
+                                    <span class="text-sm text-gray-500 align-top">$</span>
+                                    <span class="text-3xl font-bold text-gray-900">${product.price}</span>
+                                </div>
+                                
+                                <!-- Add to Cart Button -->
+                                <button class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 px-4 rounded-lg font-bold hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+            </script>
+
         </div>
-    </main>
-    
-    <!-- Footer -->
+    </div>
+  <!-- Footer -->
     <footer class="bg-neutral-900 text-white py-12">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -321,7 +330,7 @@
               </li>
               <li>
                 <a
-                  href="#"
+                  href="contact.html"
                   class="hover:bg-gradient-to-r hover:from-orange-700 hover:via-orange-500 hover:to-yellow-400 hover:bg-clip-text hover:text-transparent"
                   data-i18n="Contact Us"
                   >Contact Us</a
