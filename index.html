@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bako © - Premium Lubricants</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #3b82f6 100%
+        );
+      }
+      .product-card:hover .product-overlay {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .product-overlay {
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      .language-dropdown {
+        pointer-events: none;
+      }
+      .group:hover .language-dropdown {
+        pointer-events: auto;
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #3b82f6;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover:after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="#" class="flex items-center">
+            <img
+              src="Assets/logo.PNG"
+              alt="Bako Logo"
+              class="h-12 bg-blue-800 p-1 rounded"
+            />
+            <span class="ml-2 text-xl font-bold text-blue-800">BAKO</span>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="#"
+            class="nav-link text-blue-900 hover:text-blue-600 font-medium"
+            >HOME</a
+          >
+          <a
+            href="#"
+            class="nav-link text-blue-900 hover:text-blue-600 font-medium"
+            >ABOUT</a
+          >
+          <a
+            href="#"
+            class="nav-link text-blue-900 hover:text-blue-600 font-medium"
+            >SERVICES</a
+          >
+          <a
+            href="#"
+            class="nav-link text-blue-900 hover:text-blue-600 font-medium"
+            >PROJECTS</a
+          >
+        </nav>
+
+        <!-- Language Selector -->
+        <div class="language-selector relative group">
+          <button
+            class="flex items-center text-blue-900 hover:text-blue-600 focus:outline-none cursor-pointer transition-colors duration-200 px-3 py-2 rounded-md hover:bg-blue-50"
+          >
+            <i class="fas fa-globe mr-1"></i>
+            <span>EN</span>
+            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </button>
+          <div
+            class="language-dropdown absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0"
+          >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50"
+              >English</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50"
+              >한국어</a
+            >
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-blue-900">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t transform origin-top transition-all duration-300 ease-out scale-y-0"
+      >
+        <div class="container mx-auto px-4 py-2 flex flex-col">
+          <a href="#" class="py-2 text-blue-900 hover:text-blue-600 font-medium"
+            >HOME</a
+          >
+          <a href="#" class="py-2 text-blue-900 hover:text-blue-600 font-medium"
+            >ABOUT</a
+          >
+          <a href="#" class="py-2 text-blue-900 hover:text-blue-600 font-medium"
+            >SERVICES</a
+          >
+          <a href="#" class="py-2 text-blue-900 hover:text-blue-600 font-medium"
+            >PROJECTS</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Product Showcase -->
+    <section class="py-6 bg-gray-50 overflow-hidden">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
+          Our Product Lines
+        </h2>
+
+        <div class="relative flex flex-col md:flex-row">
+          <!-- Product 1 -->
+          <div
+            class="product-card relative h-[28rem] md:h-[36rem] md:w-1/2 overflow-hidden group"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-black/70 z-10"
+            ></div>
+            <img
+              src="Assets/Home/main1.jpg"
+              alt="Automotive Lubricants"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-8 z-20 text-white transform translate-y-8 group-hover:translate-y-0 transition duration-500"
+            >
+              <h3 class="text-2xl font-bold mb-2">Automotive Lubricants</h3>
+              <p
+                class="mb-4 opacity-0 group-hover:opacity-100 transition duration-500 delay-100"
+              >
+                Premium quality oils for all types of vehicles, ensuring optimal
+                performance and engine protection.
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-white text-blue-800 px-6 py-2 rounded-full font-medium hover:bg-blue-50 transition duration-300 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-500 delay-200"
+                >Learn More</a
+              >
+            </div>
+          </div>
+
+          <!-- Tilt Divider -->
+          <div class="hidden md:block relative w-16 overflow-hidden">
+            <div
+              class="absolute inset-0 bg-gray-50 transform -skew-x-12 origin-center"
+            ></div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="product-card relative h-[28rem] md:h-[36rem] md:w-1/2 overflow-hidden group mt-4 md:mt-0"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-black/70 z-10"
+            ></div>
+            <img
+              src="Assets/Home/main2.jpg"
+              alt="Industrial Lubricants"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-8 z-20 text-white transform translate-y-8 group-hover:translate-y-0 transition duration-500"
+            >
+              <h3 class="text-2xl font-bold mb-2">Industrial Lubricants</h3>
+              <p
+                class="mb-4 opacity-0 group-hover:opacity-100 transition duration-500 delay-100"
+              >
+                Specialized lubricants for industrial machinery, reducing
+                friction and extending equipment life.
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-white text-blue-800 px-6 py-2 rounded-full font-medium hover:bg-blue-50 transition duration-300 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-500 delay-200"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Award Section -->
+    <section
+      class="py-16 bg-white relative"
+      style="
+        background: url('Assets/Home/back-best.png') center/cover no-repeat;
+      "
+    >
+      <div class="absolute inset-0 bg-black/30"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+            <img
+              src="Assets/Home/Award.png"
+              alt="Award"
+              class="w-full max-w-md mx-auto"
+            />
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-white mb-4">
+              Worldwide No.1* Mineral Oil
+            </h2>
+            <p class="text-lg text-white mb-6">
+              Bako, the lubricant brand of world-class petrochemical company GS
+              Caltex, is trusted by customers worldwide.
+            </p>
+            <p
+              class="text-white text-sm shadow-md shadow-lg p-4 rounded-lg mb-2"
+            >
+              *Recognized as Korea's No. 1 brand in the lubricant category as
+              winner of Korea's First Brand Awards for nine consecutive years
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-blue-900 mb-8">About Bako</h2>
+          <div class="bg-white rounded-lg shadow-md p-8">
+            <p class="text-gray-700 mb-6">
+              Bako is a trusted and certified company specializing in
+              high-quality mineral oils and lubricants. We are committed to
+              providing reliable, premium products for automotive and industrial
+              applications.
+            </p>
+            <p class="text-gray-700 mb-6">
+              Our oils are manufactured to the highest international standards,
+              ensuring performance, protection, and longevity for your machinery
+              and vehicles.
+            </p>
+            <p class="text-gray-700">
+              With years of experience and a reputation for excellence, Bako
+              stands as a symbol of quality and trust in the lubricants
+              industry. Our mission is to deliver innovative solutions and
+              outstanding customer service to our partners and clients
+              worldwide.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <img src="Assets/logo.PNG" alt="Bako Logo" class="h-12 mb-4" />
+            <p class="mb-4">
+              Premium lubricants and mineral oils for automotive and industrial
+              applications.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white hover:text-blue-200"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white hover:text-blue-200"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white hover:text-blue-200"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="text-white hover:text-blue-200"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-blue-200">Home</a></li>
+              <li><a href="#" class="hover:text-blue-200">About</a></li>
+              <li><a href="#" class="hover:text-blue-200">Services</a></li>
+              <li><a href="#" class="hover:text-blue-200">Projects</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Legal</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-blue-200">Terms</a></li>
+              <li><a href="#" class="hover:text-blue-200">About Us</a></li>
+              <li><a href="#" class="hover:text-blue-200">Notice</a></li>
+              <li><a href="#" class="hover:text-blue-200">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-blue-800 mt-8 pt-8 text-center text-sm">
+          <p>© 2025 Bako. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            setTimeout(() => menu.classList.remove("scale-y-0"), 10);
+          } else {
+            menu.classList.add("scale-y-0");
+            setTimeout(() => menu.classList.add("hidden"), 300);
+          }
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Add animation to product cards when they come into view
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-fadeIn");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll(".product-card").forEach((card) => {
+        observer.observe(card);
+      });
+    </script>
+  </body>
+</html>

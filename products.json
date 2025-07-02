@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Automotive Lubricant 1",
+    "description": "Premium engine oil for cars, providing excellent protection and performance.",
+    "image": "Assets/Products/1.png",
+    "price": 29.99,
+    "category": "Automotive"
+  },
+  {
+    "name": "Automotive Lubricant 2",
+    "description": "High-quality lubricant designed for modern automotive engines.",
+    "image": "Assets/Products/2.png",
+    "price": 34.99,
+    "category": "Automotive"
+  },
+  {
+    "name": "Automotive Lubricant 3",
+    "description": "Reliable oil for cars, ensuring smooth operation and engine longevity.",
+    "image": "Assets/Products/3.png",
+    "price": 27.5,
+    "category": "Automotive"
+  },
+  {
+    "name": "Industrial Lubricant 1",
+    "description": "High-performance industrial lubricant for heavy machinery and equipment.",
+    "image": "Assets/Products/4.png",
+    "price": 49.99,
+    "category": "Industrial"
+  },
+  {
+    "name": "Industrial Lubricant 2",
+    "description": "Advanced synthetic oil for industrial applications and long-lasting protection.",
+    "image": "Assets/Products/5.png",
+    "price": 59.99,
+    "category": "Industrial"
+  },
+  {
+    "name": "Industrial Lubricant 3",
+    "description": "Multi-purpose lubricant suitable for a wide range of industrial uses.",
+    "image": "Assets/Products/6.png",
+    "price": 44.99,
+    "category": "Industrial"
+  }
+]
