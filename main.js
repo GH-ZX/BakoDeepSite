@@ -111,3 +111,31 @@ langModalBtns.forEach((btn) => {
 
 // On load
 window.addEventListener("DOMContentLoaded", () => setLang(currentLang));
+
+
+
+
+   // Select the form using its ID
+        const contactForm = document.getElementById('contact-form');
+
+        // Add an event listener for the 'submit' event
+        contactForm.addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Get the value from the message field
+            const message = document.getElementById('message').value;
+            
+            // The destination email address
+            const toEmail = 'Abd.bako.company@gmail.com';
+            
+            // A default subject line for the email
+            const subject = 'Message from Website Contact Form';
+
+            // Create the 'mailto' link. We use encodeURIComponent to ensure
+            // special characters in the subject and body are handled correctly.
+            const mailtoLink = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+
+            // Redirect the browser to the 'mailto' link, which opens the user's default email client.
+            window.location.href = mailtoLink;
+        });
