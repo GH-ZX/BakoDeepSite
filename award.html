@@ -153,54 +153,122 @@
       </div>
     </header>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
-      <div class="max-w-xl mx-auto">
-        <!-- Header Section -->
-        <div class="text-center mb-12">
-          <h1
-            class="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight"
-          >
-            Send a Message
-          </h1>
-          <p class="mt-4 text-lg text-gray-600">
-            Your message will be sent directly to our inbox.
-          </p>
-        </div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="text-center mb-16">
+        <h1
+          class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 pb-2"
+        >
+          Our Certificates & Achievements
+        </h1>
+        <p class="text-gray-500 mt-2">
+          We are proud to present the highest standards of quality and
+          excellence.
+        </p>
+      </div>
 
-        <!-- Main Content: Simplified Form -->
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-          <div class="p-8 sm:p-12 lg:p-16">
-            <!-- The form now only contains the message and button -->
-            <form id="contact-form" class="space-y-6">
-              <div>
-                <label
-                  for="message"
-                  class="block text-sm font-medium text-gray-700"
-                  >Message</label
-                >
-                <div class="mt-1">
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="6"
-                    required
-                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm py-3 px-4 border"
-                  ></textarea>
-                </div>
-              </div>
-              <div class="flex justify-end">
-                <button
-                  type="submit"
-                  class="w-full inline-flex items-center justify-center rounded-md border border-transparent bg-orange-800 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all sm:w-auto"
-                >
-                  Send Message
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
+      <!-- Container for certificate sections -->
+      <div id="certificates-container" class="space-y-16">
+        <!-- Certificate sections will be inserted here by JavaScript -->
       </div>
     </div>
+
+    <!-- Modal for displaying the enlarged image -->
+    <div
+      id="image-modal"
+      class="modal fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none"
+    >
+      <div class="bg-white p-2 rounded-lg max-w-4xl max-h-full">
+        <img
+          id="modal-img"
+          src=""
+          alt="Enlarged certificate image"
+          class="max-w-full max-h-[90vh] object-contain"
+        />
+      </div>
+    </div>
+
+    <script>
+      // Certificate data in English with updated older dates
+      const certificates = [
+        {
+          id: 1,
+          title: "Global Quality Certificate ISO 9001",
+          year: "2004",
+          description:
+            "Awarded for our commitment to applying the highest quality management standards in all our operations, ensuring customer satisfaction and delivering products and services that exceed expectations.",
+          image: "Assets/awards/award1.png",
+        },
+        {
+          id: 2,
+          title: "Customer Service Excellence Award",
+          year: "2008",
+          description:
+            "Recognizing our team's efforts in providing an exceptional customer service experience and building strong, sustainable client relationships. We believe that excellent service is the foundation of success.",
+          image: "Assets/awards/award2.png",
+        },
+        {
+          id: 3,
+          title: "Industrial Innovation Certificate",
+          year: "2012",
+          description:
+            "This certificate is awarded for our pioneering role in developing innovative solutions that advance the industry. We always strive to adopt the latest technologies to provide added value to our partners.",
+          image: "Assets/awards/award3.png",
+        },
+      ];
+
+      const certificatesContainer = document.getElementById(
+        "certificates-container"
+      );
+      const modal = document.getElementById("image-modal");
+      const modalImg = document.getElementById("modal-img");
+
+      // Create and append certificate sections
+      certificates.forEach((cert) => {
+        const section = document.createElement("div");
+        // Base classes for the section
+        section.className =
+          "flex flex-col md:flex-row items-center gap-8 lg:gap-12";
+
+        // Alternate layout for even-numbered items
+        if (cert.id % 2 === 0) {
+          section.classList.add("md:flex-row-reverse");
+        }
+
+        section.innerHTML = `
+                <!-- Image Column -->
+                <div class="md:w-1/2 w-full">
+                    <img src="${cert.image}" 
+                         alt="${cert.title}" 
+                         class="rounded-lg shadow-xl cursor-pointer w-full h-auto object-cover certificate-image" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/800x600/f87171/fff?text=Image+Error';">
+                </div>
+
+                <!-- Text Column -->
+                <div class="md:w-1/2 w-full text-center md:text-left">
+                    <span class="inline-block bg-orange-100 text-orange-800 text-sm font-semibold px-3 py-1 rounded-full mb-4">${cert.year}</span>
+                    <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600 mb-4">${cert.title}</h2>
+                    <p class="text-gray-600 leading-relaxed">${cert.description}</p>
+                </div>
+            `;
+        certificatesContainer.appendChild(section);
+      });
+
+      // Add event listeners to open the modal
+      document.querySelectorAll(".certificate-image").forEach((img, index) => {
+        img.addEventListener("click", () => {
+          modalImg.src = certificates[index].image;
+          modal.classList.remove("opacity-0", "pointer-events-none");
+        });
+      });
+
+      // Close the modal when clicking outside the image
+      modal.addEventListener("click", (e) => {
+        // Check if the click is on the modal backdrop itself, not on the image
+        if (e.target.id === "image-modal") {
+          modal.classList.add("opacity-0", "pointer-events-none");
+        }
+      });
+    </script>
 
     <!-- Footer -->
     <footer class="bg-neutral-900 text-white py-12">
