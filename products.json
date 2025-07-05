@@ -9,14 +9,6 @@
   },
   {
     "id": 2,
-    "name": "Blue Engine Oil",
-    "viscosity": "15W-40",
-    "description": "Premium oil for industrial machinery and equipment.",
-    "image": "Assets/Products/Bako-Product-Blue-1L-15-40.jpg",
-    "color": "#2c3e50"
-  },
-  {
-    "id": 3,
     "name": "Dark Blue Engine Oil",
     "viscosity": "10W-40",
     "description": "Synthetic lubricant for extended engine life.",
@@ -24,7 +16,7 @@
     "color": "#1d2a38"
   },
   {
-    "id": 4,
+    "id": 3,
     "name": "Red Engine Oil",
     "viscosity": "5W-30",
     "description": "Advanced protection for high-performance engines.",
@@ -32,7 +24,7 @@
     "color": "#8B0000"
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "Red Engine Oil (4L)",
     "viscosity": "5W-30",
     "description": "Heavy-duty oil for trucks and commercial vehicles.",
@@ -40,7 +32,7 @@
     "color": "#8B0000"
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "Yellow Engine Oil",
     "viscosity": "20W-50",
     "description": "Multi-purpose oil for various applications.",
@@ -48,11 +40,19 @@
     "color": "#D4AC0D"
   },
   {
-    "id": 7,
+    "id": 6,
     "name": "Yellow Engine Oil (5L)",
     "viscosity": "20W-50",
     "description": "Eco-friendly lubricant for modern engines.",
     "image": "Assets/Products/Bako-Product-Yellow-5L-20W-50.jpg",
     "color": "#D4AC0D"
+  },
+  {
+    "id": 7,
+    "name": "Blue Engine Oil",
+    "viscosity": "15W-40",
+    "description": "Premium oil for industrial machinery and equipment.",
+    "image": "Assets/Products/Bako-Product-Blue-1L-15-40.jpg",
+    "color": "#2c3e50"
   }
 ]

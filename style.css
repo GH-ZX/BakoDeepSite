@@ -94,11 +94,23 @@ html {
 /* Mobile Menu Body Shift */
 body.mobile-menu-open #main-content,
 body.mobile-menu-open #footer-placeholder {
-  transition: transform 0.3s ease-out;
-  transform: translateY(80px); /* Adjust this value as needed */
+  transition: transform 0.4s ease-in-out;
+  transform: translateY(20px); /* Reduced shift for less page displacement */
 }
 
 #main-content,
 #footer-placeholder {
-  transition: transform 0.3s ease-out;
+  transition: transform 0.4s ease-in-out;
 }
+
+
+.award-bg {
+  background-size: cover;
+  background-position: center;
+}
+
+.award-bg:hover {
+  background-position: center 50%;
+  transition: background-position 0.5s ease-in-out;
+}
+

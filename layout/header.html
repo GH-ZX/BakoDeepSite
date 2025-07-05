@@ -31,12 +31,6 @@
         >HOME</a
       >
       <a
-        href="index.html#About-Section"
-        class="nav-link bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent hover:from-[var(--feather-color)] hover:via-[var(--olive-color)] hover:to-[var(--red-color)] font-medium"
-        data-i18n="ABOUT"
-        >ABOUT</a
-      >
-      <a
         href="products.html"
         class="nav-link bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent hover:from-[var(--feather-color)] hover:via-[var(--olive-color)] hover:to-[var(--red-color)] font-medium"
         data-i18n="PRODUCTS"
@@ -48,6 +42,12 @@
         data-i18n="CERTIFICATES"
         >Certificates</a
       >
+      <a
+        href="index.html#About-Section"
+        class="nav-link bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent hover:from-[var(--feather-color)] hover:via-[var(--olive-color)] hover:to-[var(--red-color)] font-medium"
+        data-i18n="ABOUT"
+        >ABOUT</a
+      >
     </nav>
 
     <!-- Language Selector -->
@@ -57,7 +57,7 @@
         class="flex items-center bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent hover:from-[var(--feather-color)] hover:via-[var(--olive-color)] hover:to-[var(--red-color)] focus:outline-none cursor-pointer transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-100"
       >
         <i class="fas fa-globe mr-1"></i>
-        <span>EN</span>
+        <span>Language</span>
       </button>
     </div>
 
@@ -95,6 +95,7 @@
       </div>
     </div>
 
+
     <!-- Mobile Menu Button -->
     <button
       id="mobile-menu-button"
@@ -109,19 +110,22 @@
     id="mobile-menu"
     class="hidden md:hidden bg-white border-t transform origin-top transition-all duration-300 ease-out scale-y-0"
   >
-    <div class="container mx-auto px-4 py-2 flex flex-col">
-      <a
-        href="index.html"
-        class="py-2 bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent hover:from-[var(--feather-color)] hover:via-[var(--olive-color)] hover:to-[var(--red-color)] font-medium"
-        data-i18n="HOME"
-        >HOME</a
-      >
-      <a
-        href="index.html#About-Section"
-        class="py-2 bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent hover:from-[var(--feather-color)] hover:via-[var(--olive-color)] hover:to-[var(--red-color)] font-medium"
-        data-i18n="ABOUT"
-        >ABOUT</a
-      >
+    <div class="container mx-auto px-4 py-1 flex flex-col">
+      <div class="flex flex-row justify-between items-center py-1">
+        <a
+          href="index.html"
+          class=" bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent hover:from-[var(--feather-color)] hover:via-[var(--olive-color)] hover:to-[var(--red-color)] font-medium "
+          data-i18n="HOME"
+          >HOME</a
+        >
+        <button
+          id="open-lang-modal-mobile"
+          class="flex items-center bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent focus:outline-none cursor-pointer transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-100 md:hidden"
+        >
+          <i class="fas fa-globe mr-1"></i>
+          <span>Language</span>
+        </button>
+      </div>
       <a
         href="products.html"
         class="py-2 bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent hover:from-[var(--feather-color)] hover:via-[var(--olive-color)] hover:to-[var(--red-color)] font-medium"
@@ -134,13 +138,7 @@
         data-i18n="CERTIFICATES"
         >Certificates</a
       >
-      <button
-        id="open-lang-modal-mobile"
-        class="flex items-center bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent focus:outline-none cursor-pointer transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-100 mt-2 md:hidden"
-      >
-        <i class="fas fa-globe mr-1"></i>
-        <span>EN</span>
-      </button>
+      
     </div>
   </div>
 </header>

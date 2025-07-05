@@ -284,3 +284,5 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((e) => console.error("Could not load translations:", e));
 });
+
+
