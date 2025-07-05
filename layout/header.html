@@ -73,18 +73,21 @@
         >
           &times;
         </button>
-<h2 class="text-xl font-bold mb-4 text-[var(--feather-color)]" data-i18n="Select Language">
+        <h2
+          class="text-xl font-bold mb-4 text-[var(--feather-color)]"
+          data-i18n="Select Language"
+        >
           Select Language
         </h2>
         <div class="flex flex-col gap-4">
-<button
+          <button
             class="lang-modal-btn bg-gray-100 hover:bg-gray-200 text-[var(--black-color)] font-semibold py-2 rounded"
             data-lang="en"
             data-i18n="English"
           >
             English
           </button>
-<button
+          <button
             class="lang-modal-btn bg-gray-100 hover:bg-gray-200 text-[var(--black-color)] font-semibold py-2 rounded"
             data-lang="ko"
             data-i18n="Korean"
@@ -94,7 +97,6 @@
         </div>
       </div>
     </div>
-
 
     <!-- Mobile Menu Button -->
     <button
@@ -108,37 +110,40 @@
   <!-- Mobile Menu -->
   <div
     id="mobile-menu"
-    class="hidden md:hidden bg-white border-t transform origin-top transition-all duration-300 ease-out scale-y-0"
+    class="hidden md:hidden bg-white border-t transform origin-top transition-all duration-300 fade-in scale-y-0"
   >
-    <div class="container mx-auto px-4 py-1 flex flex-col">
-      <div class="flex flex-row justify-between items-center py-1">
+    <div class="container mx-auto px-4 py-2 flex flex-col">
+      <div class="py-2 flex flex-row justify-between items-center py-1">
         <a
           href="index.html"
-          class=" bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent hover:from-[var(--feather-color)] hover:via-[var(--olive-color)] hover:to-[var(--red-color)] font-medium "
+          class="font-bold bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent"
           data-i18n="HOME"
           >HOME</a
         >
         <button
           id="open-lang-modal-mobile"
-          class="flex items-center bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent focus:outline-none cursor-pointer transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-100 md:hidden"
+          class="flex items-center font-bold bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent"
         >
           <i class="fas fa-globe mr-1"></i>
           <span>Language</span>
         </button>
       </div>
-      <a
-        href="products.html"
-        class="py-2 bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent hover:from-[var(--feather-color)] hover:via-[var(--olive-color)] hover:to-[var(--red-color)] font-medium"
-        data-i18n="PRODUCTS"
-        >Products</a
-      >
-      <a
-        href="Certificates.html"
-        class="py-2 bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent hover:from-[var(--feather-color)] hover:via-[var(--olive-color)] hover:to-[var(--red-color)] font-medium"
-        data-i18n="CERTIFICATES"
-        >Certificates</a
-      >
-      
+      <div class="py-2">
+        <a
+          href="products.html"
+          class="font-bold bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent"
+          data-i18n="PRODUCTS"
+          >Products</a
+        >
+      </div>
+      <div class="py-2">
+        <a
+          href="Certificates.html"
+          class="py-2 font-bold bg-gradient-to-r from-[var(--feather-color)] via-[var(--olive-color)] to-[var(--black-color)] bg-clip-text text-transparent"
+          data-i18n="CERTIFICATES"
+          >Certificates</a
+        >
+      </div>
     </div>
   </div>
 </header>
