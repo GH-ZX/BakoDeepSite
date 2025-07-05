@@ -13,14 +13,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="font-sans antialiased text-gray-800">
+    <!-- Header Section -->
     <div id="header-placeholder"></div>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
-      <div class="max-w-xl mx-auto">
-        <!-- Header Section -->
-        <div class="text-center mb-12">
+    <!-- Contact Form Section -->
+    <div class="container mx-auto px-2 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 ">
+      <div class="max-w-xl mx-auto ">
+
+        <div class="text-center mb-12 ">
           <h1
-            class="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight"
+            class="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight "
             data-i18n="Send a Message"
           >
             Send a Message
@@ -70,35 +72,30 @@
       </div>
     </div>
 
+    <!-- Footer Section -->
     <div id="footer-placeholder"></div>
 
     <script src="main.js"></script>
 
-    <!-- Terms Modal -->
+   <!-- About Modal -->
     <div
-      id="terms-modal"
-      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+      id="about-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden opacity-0 transition-opacity duration-300"
     >
-      <div class="bg-white rounded-lg shadow-lg p-8 w-11/12 md:w-1/2 relative">
+      <div
+        class="hero-gradient rounded-lg shadow-lg p-8 w-11/12 md:w-1/2 relative transform scale-95 transition-transform duration-300 text-white"
+      >
         <button
-          id="close-terms-modal"
-          class="absolute top-2 right-2 text-gray-500 hover:text-[var(--red-color)] text-xl"
+          id="close-about-modal"
+          class="absolute top-2 right-2 text-white hover:text-gray-300 text-xl"
         >
           &times;
         </button>
-        <h2
-          class="text-2xl font-bold mb-4 text-[var(--feather-color)]"
-          data-i18n="Terms and Conditions"
-        >
-          Terms and Conditions
-        </h2>
-        <p class="text-gray-700" data-i18n="Terms and Conditions content...">
-          Terms and Conditions content...
-        </p>
+        <div id="about-modal-placeholder"></div>
         <button
-          id="close-terms-modal-button"
-          class="mt-6 bg-[var(--black-color)] text-white px-4 py-2 rounded hover:bg-[var(--red-color)]"
-          data-i1e="Close"
+          id="close-about-modal-button"
+          class="mt-6 bg-white/20 text-white px-4 py-2 rounded hover:bg-white/30"
+          data-i18n="Close"
         >
           Close
         </button>
