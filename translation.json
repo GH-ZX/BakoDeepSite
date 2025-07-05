@@ -47,7 +47,12 @@
     "Yellow Engine Oil (5L)": "Yellow Engine Oil (5L)",
     "Eco-friendly lubricant for modern engines.": "Eco-friendly lubricant for modern engines.",
     "Blue Engine Oil": "Blue Engine Oil",
-    "Premium oil for industrial machinery and equipment.": "Premium oil for industrial machinery and equipment."
+    "Premium oil for industrial machinery and equipment.": "Premium oil for industrial machinery and equipment.",
+    "Contact Us": "Contact Us",
+    "Send a Message":"Send a Message",
+    "Your message will be sent directly to our inbox.":"Your message will be sent directly to our inbox." ,
+    "Close" : "Close",
+    "Send Message": "Send Message"
   },
   "ko": {
     "Bako © - Premium Lubricants": "Bako © - 프리미엄 윤활유",
@@ -97,6 +102,12 @@
     "Yellow Engine Oil (5L)": "옐로우 엔진 오일 (5L)",
     "Eco-friendly lubricant for modern engines.": "현대 엔진을 위한 친환경 윤활유.",
     "Blue Engine Oil": "블루 엔진 오일",
-    "Premium oil for industrial machinery and equipment.": "산업 기계 및 장비를 위한 프리미엄 오일."
+    "Premium oil for industrial machinery and equipment.": "산업 기계 및 장비를 위한 프리미엄 오일.",
+    "Send a Message": "메시지 보내기",
+    "Your message will be sent directly to our inbox.": "귀하의 메시지는 우리 받은 편지함으로 직접 전송됩니다.",
+    "Message": "메시지",
+    "Send Message": "메시지 보내기",
+    "Close": "닫기",
+    "Contact Us": "문의하기"
   }
 }
