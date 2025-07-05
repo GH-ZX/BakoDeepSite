@@ -12,146 +12,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="font-sans antialiased text-gray-800">
-    <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-      <div
-        class="container mx-auto px-4 py-3 flex justify-between items-center"
-      >
-        <!-- Logo -->
-        <div class="flex items-center">
-          <a href="index.html" class="flex items-center">
-            <img
-              src="Assets/logo.PNG"
-              alt="Bako Logo"
-              class="h-12 p-1 rounded"
-              style="
-                background: linear-gradient(90deg, #c2410c 0%, #f59e42 100%);
-              "
-            />
-            <span
-              class="ml-2 text-xl font-bold bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 bg-clip-text text-transparent"
-              >BAKO</span
-            >
-          </a>
-        </div>
-
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex space-x-8">
-          <a
-            href="index.html"
-            class="nav-link bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 bg-clip-text text-transparent hover:from-orange-600 hover:via-orange-400 hover:to-yellow-300 font-medium"
-            data-i18n="HOME"
-            >HOME</a
-          >
-          <a
-            href="#"
-            class="nav-link bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 bg-clip-text text-transparent hover:from-orange-600 hover:via-orange-400 hover:to-yellow-300 font-medium"
-            data-i18n="ABOUT"
-            >ABOUT</a
-          >
-          <a
-            href="#"
-            class="nav-link bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 bg-clip-text text-transparent hover:from-orange-600 hover:via-orange-400 hover:to-yellow-300 font-medium"
-            data-i18n="SERVICES"
-            >SERVICES</a
-          >
-          <a
-            href="award.html"
-            class="nav-link bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 bg-clip-text text-transparent hover:from-orange-600 hover:via-orange-400 hover:to-yellow-300 font-medium"
-            data-i18n="PROJECTS"
-            >PROJECTS</a
-          >
-        </nav>
-
-        <!-- Language Selector -->
-        <div class="language-selector relative flex hidden md:flex">
-          <button
-            id="open-lang-modal"
-            class="flex items-center bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 bg-clip-text text-transparent hover:from-orange-600 hover:via-orange-400 hover:to-yellow-300 focus:outline-none cursor-pointer transition-colors duration-200 px-3 py-2 rounded-md hover:bg-orange-50"
-          >
-            <i class="fas fa-globe mr-1"></i>
-            <span>EN</span>
-          </button>
-        </div>
-
-        <!-- Language Modal -->
-        <div
-          id="lang-modal"
-          class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden"
-        >
-          <div class="bg-white rounded-lg shadow-lg p-8 w-80 relative">
-            <button
-              id="close-lang-modal"
-              class="absolute top-2 right-2 text-gray-500 hover:text-orange-800 text-xl"
-            >
-              &times;
-            </button>
-            <h2 class="text-xl font-bold mb-4 text-orange-800">
-              Select Language
-            </h2>
-            <div class="flex flex-col gap-4">
-              <button
-                class="lang-modal-btn bg-orange-100 hover:bg-orange-200 text-orange-800 font-semibold py-2 rounded"
-                data-lang="en"
-              >
-                English
-              </button>
-              <button
-                class="lang-modal-btn bg-orange-100 hover:bg-orange-200 text-orange-800 font-semibold py-2 rounded"
-                data-lang="ko"
-              >
-                한국어
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-button" class="md:hidden text-orange-800">
-          <i class="fas fa-bars text-xl"></i>
-        </button>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-white border-t transform origin-top transition-all duration-300 ease-out scale-y-0"
-      >
-        <div class="container mx-auto px-4 py-2 flex flex-col">
-          <a
-            href="index.html"
-            class="py-2 bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 bg-clip-text text-transparent hover:from-orange-600 hover:via-orange-400 hover:to-yellow-300 font-medium"
-            data-i18n="HOME"
-            >HOME</a
-          >
-          <a
-            href="#"
-            class="py-2 bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 bg-clip-text text-transparent hover:from-orange-600 hover:via-orange-400 hover:to-yellow-300 font-medium"
-            data-i18n="ABOUT"
-            >ABOUT</a
-          >
-          <a
-            href="#"
-            class="py-2 bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 bg-clip-text text-transparent hover:from-orange-600 hover:via-orange-400 hover:to-yellow-300 font-medium"
-            data-i18n="SERVICES"
-            >SERVICES</a
-          >
-          <a
-            href="award.html"
-            class="py-2 bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 bg-clip-text text-transparent hover:from-orange-600 hover:via-orange-400 hover:to-yellow-300 font-medium"
-            data-i18n="PROJECTS"
-            >PROJECTS</a
-          >
-          <button
-            id="open-lang-modal-mobile"
-            class="flex items-center bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 bg-clip-text text-transparent focus:outline-none cursor-pointer transition-colors duration-200 px-3 py-2 rounded-md hover:bg-orange-50 mt-2 md:hidden"
-          >
-            <i class="fas fa-globe mr-1"></i>
-            <span>EN</span>
-          </button>
-        </div>
-      </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
       <div class="max-w-xl mx-auto">
@@ -193,7 +54,7 @@
               <div class="flex justify-end">
                 <button
                   type="submit"
-                  class="w-full inline-flex items-center justify-center rounded-md border border-transparent bg-orange-800 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all sm:w-auto"
+                  class="w-full inline-flex items-center justify-center rounded-md border border-transparent bg-[var(--black-color)] px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-[var(--red-color)] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all sm:w-auto"
                   data-i18n="Send Message"
                 >
                   Send Message
@@ -205,105 +66,27 @@
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-neutral-900 text-white py-12">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div class="md:col-span-2">
-            <img src="Assets/logo.PNG" alt="Bako Logo" class="h-12 mb-4" />
-            <p class="mb-4" data-i18n="premium_lubricants_text">
-              Premium lubricants and mineral oils for automotive and industrial
-              applications.
-            </p>
-          </div>
-          <div>
-            <h3
-              class="text-lg font-bold mb-4 bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 bg-clip-text text-transparent"
-              data-i18n="Quick Links"
-            >
-              Quick Links
-            </h3>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  class="hover:bg-gradient-to-r hover:from-orange-700 hover:via-orange-500 hover:to-yellow-400 hover:bg-clip-text hover:text-transparent"
-                  data-i18n="Services"
-                  >Services</a
-                >
-              </li>
-              <li>
-                <a
-                  href="award.html"
-                  class="hover:bg-gradient-to-r hover:from-orange-700 hover:via-orange-500 hover:to-yellow-400 hover:bg-clip-text hover:text-transparent"
-                  data-i18n="Projects"
-                  >Projects</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3
-              class="text-lg font-bold mb-4 bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-400 bg-clip-text text-transparent"
-              data-i18n="Legal"
-            >
-              Legal
-            </h3>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  id="terms-link"
-                  class="hover:bg-gradient-to-r hover:from-orange-700 hover:via-orange-500 hover:to-yellow-400 hover:bg-clip-text hover:text-transparent"
-                  data-i18n="Terms"
-                  >Terms</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  id="notice-link"
-                  class="hover:bg-gradient-to-r hover:from-orange-700 hover:via-orange-500 hover:to-yellow-400 hover:bg-clip-text hover:text-transparent"
-                  data-i18n="Notice"
-                  >Notice</a
-                >
-              </li>
-              <li>
-                <a
-                  href="contact.html"
-                  class="hover:bg-gradient-to-r hover:from-orange-700 hover:via-orange-500 hover:to-yellow-400 hover:bg-clip-text hover:text-transparent"
-                  data-i18n="Contact Us"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-t border-neutral-700 mt-8 pt-8 text-center text-sm">
-          <p>© 2000 Bako. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script src="main.js"></script>
 
     <!-- Terms Modal -->
     <div id="terms-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
       <div class="bg-white rounded-lg shadow-lg p-8 w-11/12 md:w-1/2 relative">
-        <button id="close-terms-modal" class="absolute top-2 right-2 text-gray-500 hover:text-orange-800 text-xl">&times;</button>
-        <h2 class="text-2xl font-bold mb-4 text-orange-800" data-i18n="Terms and Conditions">Terms and Conditions</h2>
+        <button id="close-terms-modal" class="absolute top-2 right-2 text-gray-500 hover:text-[var(--red-color)] text-xl">&times;</button>
+        <h2 class="text-2xl font-bold mb-4 text-[var(--feather-color)]" data-i18n="Terms and Conditions">Terms and Conditions</h2>
         <p class="text-gray-700" data-i18n="Terms and Conditions content...">Terms and Conditions content...</p>
-        <button id="close-terms-modal-button" class="mt-6 bg-orange-800 text-white px-4 py-2 rounded hover:bg-orange-700" data-i18n="Close">Close</button>
+        <button id="close-terms-modal-button" class="mt-6 bg-[var(--black-color)] text-white px-4 py-2 rounded hover:bg-[var(--red-color)]" data-i1e="Close">Close</button>
       </div>
     </div>
 
     <!-- Notice Modal -->
     <div id="notice-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
       <div class="bg-white rounded-lg shadow-lg p-8 w-11/12 md:w-1/2 relative">
-        <button id="close-notice-modal" class="absolute top-2 right-2 text-gray-500 hover:text-orange-800 text-xl">&times;</button>
-        <h2 class="text-2xl font-bold mb-4 text-orange-800" data-i18n="Notice Title">Notice</h2>
+        <button id="close-notice-modal" class="absolute top-2 right-2 text-gray-500 hover:text-[var(--red-color)] text-xl">&times;</button>
+        <h2 class="text-2xl font-bold mb-4 text-[var(--feather-color)]" data-i18n="Notice Title">Notice</h2>
         <p class="text-gray-700" data-i18n="Notice content...">Notice content...</p>
-        <button id="close-notice-modal-button" class="mt-6 bg-orange-800 text-white px-4 py-2 rounded hover:bg-orange-700" data-i18n="Close">Close</button>
+        <button id="close-notice-modal-button" class="mt-6 bg-[var(--black-color)] text-white px-4 py-2 rounded hover:bg-[var(--red-color)]" data-i18n="Close">Close</button>
       </div>
     </div>
   </body>
